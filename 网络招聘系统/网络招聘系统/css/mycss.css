@@ -1,0 +1,82 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#content {
+    min-height:100%;
+    position: relative;
+    /*删除边框后修改为960*/
+    width:960px;
+    margin: 0 auto;
+}
+#main {
+    padding-bottom: 60px;
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 960px;
+    background-image: url("../images/footer.gif");
+    line-height: 40px;
+}
+a {
+    text-decoration: none;
+}
+#biaoti {
+    background-image: url("../images/biaoti.gif");
+    height: 199px;
+    width: 960px;
+}
+ul {
+    margin: 0;
+    height: 30px;
+    width: 860px;
+    padding: 0 0 0 100px;
+    line-height: 30px;
+    background-image: url("../images/menu.gif");
+}
+ul li, ul li a {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    //margin-left: 50px;
+}
+ul li:hover {
+    background-image: url("../images/menuhover.gif");
+}
+#bt_login, #bt_sign {
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: -5px;
+}
+#sign {
+    display: none;
+}
+#login, #sign {
+}
+#login span, #sign span {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+}
+#login input, #sign input {
+    width: 196px;
+}
+#left {
+    width: 300px;
+    margin-top: 50px;
+}
+#right {
+    width: 630px;
+    margin-left:30px;
+}
+#l_resume, #l_job {
+    margin: 10px 0 10px 100px;
+}
+#search {
+    margin: 20px 0 0 100px;
+}

@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 12" name="BSDataClasse">
+  <DataContextMoniker Name="/BSDataClasseDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b8390d03-ff2c-4371-b7a3-7d45e0033506" absoluteBounds="0.75, 5, 2, 1.3805261230468755">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_person" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3dc04d8-a309-4022-b2c5-e8c22d143dfa" absoluteBounds="0.765, 5.46, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="185d12ca-e263-46b5-9423-a342590f1654" absoluteBounds="6.25, 3, 2, 1.3805261230468755">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_job_resume" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1e4a008-ce4f-481b-8f6c-03fc655ef768" absoluteBounds="6.265, 3.46, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13d9ac55-44e1-479d-8153-458e640377f3" absoluteBounds="6.25, 5.125, 2, 2.3356245930989594">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_rwork" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a19a85a-4bdd-46a6-bb1b-abd72a9b2800" absoluteBounds="6.265, 5.585, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="076a9aa8-c2a9-458e-a9dd-5f72eea35a07" absoluteBounds="6.25, 8.25, 2, 2.3356245930989594">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_redu" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0680718-44aa-48a7-90bb-46334c2cbfe4" absoluteBounds="6.265, 8.71, 1.9700000000000002, 1.7756245930989585" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3cdd6a20-8146-4e35-aacd-2f7a1283db27" absoluteBounds="1.75, 2.125, 2, 2.7176639811197916">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_job" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95ee0c15-b151-42b5-9343-7a14f2e8db2c" absoluteBounds="1.7650000000000001, 2.585, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 3.46875); (6.25 : 3.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_job/BS_job_BS_job_resume" />
+      <nodes>
+        <classShapeMoniker Id="3cdd6a20-8146-4e35-aacd-2f7a1283db27" />
+        <classShapeMoniker Id="185d12ca-e263-46b5-9423-a342590f1654" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="190de894-6b3d-4098-8adc-ecd6caa41890" absoluteBounds="2.125, 8.375, 2, 2.9086836751302081">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_c_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fed328b7-aa59-4ba4-a6d5-3fa14882d169" absoluteBounds="2.14, 8.835, 1.9700000000000002, 2.348683675130208" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="786fea88-b6db-4d6b-8038-8860593f22f7" absoluteBounds="0.5, 7.125, 2, 1.5715458170572916">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e0d37ab6-ecc1-4d27-adc7-dd4ab16c435f" absoluteBounds="0.51500000000000012, 7.5850000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 7.95962087858073); (2.9687505 : 7.95962087858073); (2.9687505 : 8.375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_company/BS_company_BS_c_info" />
+      <nodes>
+        <classShapeMoniker Id="786fea88-b6db-4d6b-8038-8860593f22f7" />
+        <classShapeMoniker Id="190de894-6b3d-4098-8adc-ecd6caa41890" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7f3efbf8-7325-4ec6-a4a1-fe4b379cfd25" absoluteBounds="4.375, 8.125, 2, 3.6727624511718746">
+      <DataClassMoniker Name="/BSDataClasseDataContext/BS_resume" />
+      <nestedChildShapes>
+        <elementListCompartment Id="303c1502-97e0-4c68-ba8f-f156968ad52c" absoluteBounds="4.39, 8.585, 1.9700000000000002, 3.112762451171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.2812475 : 8.125); (5.2812475 : 3.95589056152344); (6.25 : 3.95589056152344)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_resume/BS_resume_BS_job_resume" />
+      <nodes>
+        <classShapeMoniker Id="7f3efbf8-7325-4ec6-a4a1-fe4b379cfd25" />
+        <classShapeMoniker Id="185d12ca-e263-46b5-9423-a342590f1654" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.79687575 : 8.125); (5.79687575 : 6.29281229654948); (6.25 : 6.29281229654948)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_resume/BS_resume_BS_rwork" />
+      <nodes>
+        <classShapeMoniker Id="7f3efbf8-7325-4ec6-a4a1-fe4b379cfd25" />
+        <classShapeMoniker Id="13d9ac55-44e1-479d-8153-458e640377f3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.375 : 11.1916940221354); (7.3125005 : 11.1916940221354); (7.3125005 : 10.585624593099)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_resume/BS_resume_BS_redu" />
+      <nodes>
+        <classShapeMoniker Id="7f3efbf8-7325-4ec6-a4a1-fe4b379cfd25" />
+        <classShapeMoniker Id="076a9aa8-c2a9-458e-a9dd-5f72eea35a07" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 5.03125); (4.79687125 : 5.03125); (4.79687125 : 8.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BSDataClasseDataContext/BS_person/BS_person_BS_resume" />
+      <nodes>
+        <classShapeMoniker Id="b8390d03-ff2c-4371-b7a3-7d45e0033506" />
+        <classShapeMoniker Id="7f3efbf8-7325-4ec6-a4a1-fe4b379cfd25" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

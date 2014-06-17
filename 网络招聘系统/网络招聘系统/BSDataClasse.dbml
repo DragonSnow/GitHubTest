@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="网络招聘" Class="BSDataClasseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=XUEJUN-PC;Initial Catalog=网络招聘;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="网络招聘ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.BS_person" Member="BS_person">
+    <Type Name="BS_person">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="p_psw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="BS_person_BS_resume" Member="BS_resume" ThisKey="ID" OtherKey="pID" Type="BS_resume" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_job_resume" Member="BS_job_resume">
+    <Type Name="BS_job_resume">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="BS_job_BS_job_resume" Member="BS_job" ThisKey="jID" OtherKey="ID" Type="BS_job" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="BS_resume_BS_job_resume" Member="BS_resume" ThisKey="rID" OtherKey="ID" Type="BS_resume" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_rwork" Member="BS_rwork">
+    <Type Name="BS_rwork">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="w_s_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="w_e_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="w_company" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="w_zhiwei" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="w_bumen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="w_miaoshu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="BS_resume_BS_rwork" Member="BS_resume" ThisKey="rID" OtherKey="ID" Type="BS_resume" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_redu" Member="BS_redu">
+    <Type Name="BS_redu">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="rID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="e_s_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="e_e_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="e_school" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="e_major" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="e_degree" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="e_miaoshu" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="BS_resume_BS_redu" Member="BS_resume" ThisKey="rID" OtherKey="ID" Type="BS_resume" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_job" Member="BS_job">
+    <Type Name="BS_job">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="j_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_renshu" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_nianxian" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_degree" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_xinshui" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="j_miaoshu" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Association Name="BS_job_BS_job_resume" Member="BS_job_resume" ThisKey="ID" OtherKey="jID" Type="BS_job_resume" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_c_info" Member="BS_c_info">
+    <Type Name="BS_c_info">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="c_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="c_xingzhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_hangye" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_guimo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_tellphone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="c_website" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="c_address" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="c_jianjie" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Association Name="BS_company_BS_c_info" Member="BS_company" ThisKey="cID" OtherKey="ID" Type="BS_company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_company" Member="BS_company">
+    <Type Name="BS_company">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="c_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_psw" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_name" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="BS_company_BS_c_info" Member="BS_c_info" ThisKey="ID" OtherKey="cID" Type="BS_c_info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BS_resume" Member="BS_resume">
+    <Type Name="BS_resume">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="pID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="r_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_sex" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_age" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_degree" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_height" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="p_jiguan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_dangpai" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_hunfou" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="p_address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="r_time" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="BS_resume_BS_job_resume" Member="BS_job_resume" ThisKey="ID" OtherKey="rID" Type="BS_job_resume" />
+      <Association Name="BS_resume_BS_rwork" Member="BS_rwork" ThisKey="ID" OtherKey="rID" Type="BS_rwork" />
+      <Association Name="BS_resume_BS_redu" Member="BS_redu" ThisKey="ID" OtherKey="rID" Type="BS_redu" />
+      <Association Name="BS_person_BS_resume" Member="BS_person" ThisKey="pID" OtherKey="ID" Type="BS_person" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
